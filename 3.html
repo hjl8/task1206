@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 100px auto;
+            width: 210px;
+            height: 120px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        div i {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: url(./img/bnr_icon.png);
+            border: 1px solid #000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <script>
+        let divI = document.querySelectorAll("div i");
+        for (let i = 1; i < divI.length; i++) {
+            divI[i].style = `background-position : 0 -${80 * i}px`;
+        }
+    </script>
+</body>
+
+</html>
