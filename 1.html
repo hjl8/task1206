@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="" alt="">
+    <script>
+        let now = new Date(),
+            m = Number(now.getHours())
+        img = document.querySelector('img');
+        if (m >= 0 && m < 5) {
+            img.src = 'https://img1.baidu.com/it/u=3961044222,3207434338&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1733590800&t=545cc7d3f45f90bbe1b5725130bef18a';
+            alert('凌晨好！');
+        } else if (m <= 9) {
+            img.src = 'https://fc1tn.baidu.com/it/u=4070067243,319611553&fm=202&mola=new&crop=v1';
+            alert('早上好！');
+        } else if (m < 14) {
+            img.src = 'https://img1.baidu.com/it/u=700500592,4168936543&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1733590800&t=34612b3e9ac2f3044effa15a61dc9f12';
+            alert('中午好！');
+        } else if (m < 18) {
+            img.src = 'https://img2.baidu.com/it/u=2983106286,3259252187&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1733590800&t=48fa5796081d1ab71f63a218bc1e8182';
+            alert('下午好！');
+        } else {
+            img.src = 'https://img1.baidu.com/it/u=3961044222,3207434338&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1733590800&t=545cc7d3f45f90bbe1b5725130bef18a';
+            alert('晚上好！');
+        }
+
+    </script>
+</body>
+
+</html>
