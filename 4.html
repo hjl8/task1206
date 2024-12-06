@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+        }
+
+        form span {
+            color: red;
+        }
+
+        form span:last-child {
+            display: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <span>*</span>
+        <label for="">
+            设置密码：
+            <input type="text">
+        </label>
+        <span></span>
+    </form>
+    <script>
+        let spanLast = document.querySelector('form span:last-child');
+        document.querySelector('form input').onblur = function () {
+            if (this.value === '') {
+                spanLast.innerHTML = '请输入密码！！';
+                spanLast.style = 'display:block';
+                return;
+            }
+
+            if (/^\d{6,16}$/g.test(this.value)) {
+                spanLast.style = 'display:none';
+            } else {
+                spanLast.innerHTML = '密码需要8-16位数字！！';
+                spanLast.style = 'display:block';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
