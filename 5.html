@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 50px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+    <div>
+        <button>全选</button>
+        <button>不选</button>
+        <button>反选</button>
+    </div>
+
+    <script>
+        let inputs = document.querySelectorAll('input'),
+            btns = document.querySelectorAll('button');
+
+        btns[0].onclick = function () {
+            inputs.forEach(e => {
+                e.checked = true;
+            });
+        }
+
+        btns[1].onclick = function () {
+            inputs.forEach(e => {
+                e.checked = false;
+            });
+        }
+
+        btns[2].onclick = function () {
+            inputs.forEach(e => {
+                e.checked = !e.checked;
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>
